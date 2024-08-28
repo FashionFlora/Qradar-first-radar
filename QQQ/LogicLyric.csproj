@@ -1,0 +1,1493 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F8764AE7-072D-411F-B6D5-7CD7BC3820C7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LogicLyric</RootNamespace>
+    <AssemblyName>LogicLyric</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>LogicLyric.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BCrypt.Net-Next, Version=4.0.3.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net-Next.4.0.3\lib\net472\BCrypt.Net-Next.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.14.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.14\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlConnector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySqlConnector.2.2.6\lib\net471\MySqlConnector.dll</HintPath>
+    </Reference>
+    <Reference Include="PacketDotNet, Version=1.4.5.0, Culture=neutral, PublicKeyToken=451414c7667b2a58, processorArchitecture=MSIL">
+      <HintPath>..\packages\PacketDotNet.1.4.5\lib\net47\PacketDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero2, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\PresentationFramework.Aero2.1.0.1\lib\PresentationFramework.Aero2.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpPcap, Version=5.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpPcap.5.4.0\lib\netstandard2.0\SharpPcap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.6.0.0\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AANTWRKE\Mobs\MobsInfo.cs" />
+    <Compile Include="AANTWRKE\RestEventsHandlers\EnterMistOperationHandler.cs" />
+    <Compile Include="AANTWRKE\RestEventsHandlers\EnterVillageOperationHandler.cs" />
+    <Compile Include="AANTWRKE\RestEvents\EnterMistOperation.cs" />
+    <Compile Include="AANTWRKE\RestEvents\EnterVillageOperation.cs" />
+    <Compile Include="AAParser\BinaryReadesExtension.cs" />
+    <Compile Include="AAParser\ObjectConverter.cs" />
+    <Compile Include="AAParser\PhotonCommand.cs" />
+    <Compile Include="AAParser\PhotonPacket.cs" />
+    <Compile Include="AAParser\Protocol16Deserializer.cs" />
+    <Compile Include="AAParser\Protocol16Type.cs" />
+    <Compile Include="AAParser\ProtocolParser.cs" />
+    <Compile Include="CanvasDrawings\Brushes.cs" />
+    <Compile Include="CanvasDrawings\ChestDrawingItem.cs" />
+    <Compile Include="CanvasDrawings\DrawChests.cs" />
+    <Compile Include="CanvasDrawings\DrawCircles.cs" />
+    <Compile Include="CanvasDrawings\DrawDungeons.cs" />
+    <Compile Include="CanvasDrawings\DrawEnemyPlayers.cs" />
+    <Compile Include="CanvasDrawings\DrawHarvestables.cs" />
+    <Compile Include="CanvasDrawings\DrawMists.cs" />
+    <Compile Include="CanvasDrawings\DrawMistsBosses.cs" />
+    <Compile Include="CanvasDrawings\DrawMobs.cs" />
+    <Compile Include="CanvasDrawings\DungeonDrawingItem.cs" />
+    <Compile Include="CanvasDrawings\EnemyPlayerDrawingItem.cs" />
+    <Compile Include="CanvasDrawings\HarvestableDrawingItem.cs" />
+    <Compile Include="CanvasDrawings\MistBossDrawingItem.cs" />
+    <Compile Include="CanvasDrawings\MistDrawingItem.cs" />
+    <Compile Include="CanvasDrawings\MobDrawingItem.cs" />
+    <Compile Include="CanvasDrawings\PlayerDrawingItem.cs" />
+    <Compile Include="CanvasItems\CanvasChestItems.cs" />
+    <Compile Include="CanvasItems\CanvasDungeonItems.cs" />
+    <Compile Include="CanvasItems\CanvasEnemyPlayerItems.cs" />
+    <Compile Include="CanvasItems\CanvasHarvestableItem.cs" />
+    <Compile Include="CanvasItems\CanvasMistBossesItems.cs" />
+    <Compile Include="CanvasItems\CanvasMistItems.cs" />
+    <Compile Include="CanvasItems\CanvasMobItems.cs" />
+    <Compile Include="CanvasItems\CanvasPlayerItems.cs" />
+    <Compile Include="CanvasUtils\ItemsCanvas.cs" />
+    <Compile Include="Core\EnableConsole.cs" />
+    <Compile Include="Core\ObservableObject.cs" />
+    <Compile Include="Core\RelayCommand.cs" />
+    <Compile Include="Core\StaticLocks.cs" />
+    <Compile Include="CustomControls\BindablePasswordBox.xaml.cs">
+      <DependentUpon>BindablePasswordBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVM\Model\IUserRepository.cs" />
+    <Compile Include="MVM\Model\UserAccountModel.cs" />
+    <Compile Include="MVM\Model\UserModel.cs" />
+    <Compile Include="MVM\ViewModel\ChestViewModel.cs" />
+    <Compile Include="MVM\ViewModel\DataGridViewModel.cs" />
+    <Compile Include="MVM\ViewModel\LoginViewModel.cs" />
+    <Compile Include="MVM\ViewModel\MainViewModel.cs" />
+    <Compile Include="MVM\ViewModel\PlayerViewModel.cs" />
+    <Compile Include="MVM\ViewModel\RawViewModel.cs" />
+    <Compile Include="MVM\ViewModel\SettingsViewModel.cs" />
+    <Compile Include="MVM\ViewModel\ViewModelBase.cs" />
+    <Compile Include="MVM\ViewModel\ViewModelCommand.cs" />
+    <Compile Include="MVM\View\ChestView.xaml.cs">
+      <DependentUpon>ChestView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVM\View\DataGridBox.xaml.cs">
+      <DependentUpon>DataGridBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVM\View\Dialog.xaml.cs">
+      <DependentUpon>Dialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVM\View\DrawView.xaml.cs">
+      <DependentUpon>DrawView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVM\View\IgnoreDataGrid.xaml.cs">
+      <DependentUpon>IgnoreDataGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVM\View\ItemsView.xaml.cs">
+      <DependentUpon>ItemsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVM\View\LoginView.xaml.cs">
+      <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVM\View\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVM\View\PlayerView.xaml.cs">
+      <DependentUpon>PlayerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVM\View\RawView.xaml.cs">
+      <DependentUpon>RawView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVM\View\SettingsView.xaml.cs">
+      <DependentUpon>SettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\ItemsData.cs" />
+    <Compile Include="Repositories\RepositoryBase.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\RadarSettings.cs" />
+    <Compile Include="Utils\BcryptMatcher.cs" />
+    <Compile Include="Utils\IngoreListItems.cs" />
+    <Compile Include="Utils\Load.cs" />
+    <Compile Include="Utils\SimpleCipher.cs" />
+    <Compile Include="Utils\Utils.cs" />
+    <Page Include="CustomControls\BindablePasswordBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="AANTWRKE\ChestsEventsHandlers\AvalonEventHandler.cs" />
+    <Compile Include="AANTWRKE\ChestsEvent\AvalonEvent.cs" />
+    <Compile Include="AANTWRKE\Chests\Chest.cs" />
+    <Compile Include="AANTWRKE\Chests\ChestHandler.cs" />
+    <Compile Include="AANTWRKE\Dungeon\Dungeon.cs" />
+    <Compile Include="AANTWRKE\Dungeon\DungeonHandler.cs" />
+    <Compile Include="AANTWRKE\EventCodes.cs" />
+    <Compile Include="AANTWRKE\HarvestableEventsHandlers\HarvestFinishedEventHandler.cs" />
+    <Compile Include="AANTWRKE\HarvestableEventsHandlers\NewHarvestableObjectEventHandler.cs" />
+    <Compile Include="AANTWRKE\HarvestableEventsHandlers\NewSimpleHaverstableObjectListEventHandler.cs" />
+    <Compile Include="AANTWRKE\HarvestableEvents\HarvestableChangeStateEvent.cs" />
+    <Compile Include="AANTWRKE\HarvestableEvents\HarvestFinishedEvent.cs" />
+    <Compile Include="AANTWRKE\HarvestableEvents\NewHarvestableObjectEvent.cs" />
+    <Compile Include="AANTWRKE\HarvestableEvents\NewSimpleHaverstableObjectListEvent.cs" />
+    <Compile Include="AANTWRKE\Harvestable\Harvestable.cs" />
+    <Compile Include="AANTWRKE\Harvestable\HarvestableHandler.cs" />
+    <Compile Include="AANTWRKE\Harvestable\HarvestableType.cs" />
+    <Compile Include="AANTWRKE\Interfaces\INewEnemyPlayer.cs" />
+    <Compile Include="AANTWRKE\LeaveEvent.cs" />
+    <Compile Include="AANTWRKE\LeaveEventHandler.cs" />
+    <Compile Include="AANTWRKE\MistsEventsHandlers\DungeonEventHandler.cs" />
+    <Compile Include="AANTWRKE\MistsEvents\CorruptEvent.cs" />
+    <Compile Include="AANTWRKE\MistsEvents\DungeonEvent.cs" />
+    <Compile Include="AANTWRKE\MistsEvents\MistEvent.cs" />
+    <Compile Include="AANTWRKE\Mist\Mist.cs" />
+    <Compile Include="AANTWRKE\Mist\MistHandler.cs" />
+    <Compile Include="AANTWRKE\MobEventsHandlers\MobChangeStateEventHandler.cs" />
+    <Compile Include="AANTWRKE\MobEventsHandlers\NewMobEventHandler.cs" />
+    <Compile Include="AANTWRKE\MobEvents\MobChangeStateEvent.cs" />
+    <Compile Include="AANTWRKE\MobEvents\NewMobEvent.cs" />
+    <Compile Include="AANTWRKE\Mobs\Mob.cs" />
+    <Compile Include="AANTWRKE\Mobs\MobsHandler.cs" />
+    <Compile Include="AANTWRKE\MoveEvent.cs" />
+    <Compile Include="AANTWRKE\MoveEventHandler.cs" />
+    <Compile Include="AANTWRKE\MoveOperation.cs" />
+    <Compile Include="AANTWRKE\MoveRequestHandler.cs" />
+    <Compile Include="AANTWRKE\NewCharacterEvent.cs" />
+    <Compile Include="AANTWRKE\NewCharacterEventHandler.cs" />
+    <Compile Include="AANTWRKE\OperationCodes.cs" />
+    <Compile Include="AANTWRKE\PlayerAttackEvent.cs" />
+    <Compile Include="AANTWRKE\PlayerAttackEventHandler.cs" />
+    <Compile Include="AANTWRKE\PlayerChangeItemEvent.cs" />
+    <Compile Include="AANTWRKE\PlayerChangeItemEventHandler.cs" />
+    <Compile Include="AANTWRKE\PlayerEventsHandlers\FirstTimeMountedEventHandler.cs" />
+    <Compile Include="AANTWRKE\PlayerEventsHandlers\MountedEventHandler.cs" />
+    <Compile Include="AANTWRKE\PlayerEvents\FirstTimeMountedEvent.cs" />
+    <Compile Include="AANTWRKE\PlayerEvents\MountedEvent.cs" />
+    <Compile Include="AANTWRKE\PlayerNewItemEvent.cs" />
+    <Compile Include="AANTWRKE\PlayerNewItemEventHandler.cs" />
+    <Compile Include="AANTWRKE\PlayerRegenEvent.cs" />
+    <Compile Include="AANTWRKE\PlayerRegenEventHandler.cs" />
+    <Compile Include="AANTWRKE\Player\Player.cs" />
+    <Compile Include="AANTWRKE\Player\PlayerHandler.cs" />
+    <Compile Include="AANTWRKE\Player\PlayerItemHandler.cs" />
+    <Compile Include="AANTWRKE\RestEventsHandlers\JoinFinishedEventHandler.cs" />
+    <Compile Include="AANTWRKE\RestEvents\CastSpellEvent.cs" />
+    <Compile Include="AANTWRKE\RestEvents\InCombatStateUpdateEvent.cs" />
+    <Compile Include="AANTWRKE\RestEvents\JoinFinishedEvent.cs" />
+    <Compile Include="AANTWRK\AlbionParser.cs" />
+    <Compile Include="AANTWRK\BaseEvent.cs" />
+    <Compile Include="AANTWRK\BaseOperation.cs" />
+    <Compile Include="AANTWRK\EventPacket.cs" />
+    <Compile Include="AANTWRK\EventPacketHandler.cs" />
+    <Compile Include="AANTWRK\HandlersCollection.cs" />
+    <Compile Include="AANTWRK\IPacketHandler.cs" />
+    <Compile Include="AANTWRK\PacketHandler.cs" />
+    <Compile Include="AANTWRK\ReceiverBuilder.cs" />
+    <Compile Include="AANTWRK\RequestPacket.cs" />
+    <Compile Include="AANTWRK\RequestPacketHandler.cs" />
+    <Compile Include="AANTWRK\ResponsePacket.cs" />
+    <Compile Include="AANTWRK\ResponsePacketHandler.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MVM\View\ChestView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVM\View\DataGridBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVM\View\Dialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVM\View\DrawView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVM\View\IgnoreDataGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVM\View\ItemsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVM\View\LoginView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVM\View\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVM\View\PlayerView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVM\View\RawView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVM\View\SettingsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\ButtonStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\UIColors.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AANTWRKE\CanvasItems\" />
+    <Folder Include="Fonts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chief.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chosenofmorgana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\commander.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corrupt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cryomancer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CRYSTALSPIDER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\droneicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\druid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dungeon_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dungeon_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dungeon_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dungeon_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dungeon_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enforcer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FAIRYDRAGON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_2_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_3_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_4_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_4_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_4_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_4_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_4_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_5_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_5_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_5_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_5_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_5_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_6_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_6_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_6_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_6_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_6_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_7_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_7_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_7_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_7_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_7_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_8_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_8_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_8_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_8_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_8_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grandfather.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graybeard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GRIFFIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hellgate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_1_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_2_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_3_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_4_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_4_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_4_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_4_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_4_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_5_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_5_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_5_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_5_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_5_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_6_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_6_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_6_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_6_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_6_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_7_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_7_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_7_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_7_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_7_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_8_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_8_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_8_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_8_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_8_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\legendary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lieutenant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_1_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_2_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_3_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_4_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_4_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_4_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_4_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_4_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_5_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_5_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_5_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_5_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_5_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_6_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_6_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_6_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_6_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_6_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_7_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_7_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_7_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_7_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_7_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_8_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_8_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_8_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_8_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_8_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lord.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maiden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marksman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mastercryomancer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\masterof.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mist_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mist_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mist_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mist_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mist_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mistress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nameless.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_2_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_3_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_4_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_4_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_4_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_4_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_4_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_5_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_5_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_5_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_5_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_5_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_6_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_6_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_6_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_6_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_6_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_7_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_7_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_7_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_7_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_7_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_8_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_8_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_8_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_8_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_8_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pyromaniac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rabble.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ritual.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_1_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_2_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_3_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_4_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_4_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_4_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_4_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_5_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_5_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_5_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_5_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_6_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_6_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_6_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_6_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_7_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_7_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_7_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_7_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_8_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_8_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_8_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_8_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suppression.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\swordmaster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VEILWEAVER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warrior.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chief1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chosenofmorgana1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\commander1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corrupt1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cryomancer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CRYSTALSPIDER1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\droneicon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\druid1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dungeon_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dungeon_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dungeon_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dungeon_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dungeon_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elder1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enforcer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FAIRYDRAGON1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_2_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_3_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_4_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_4_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_4_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_4_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_4_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_5_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_5_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_5_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_5_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_5_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_6_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_6_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_6_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_6_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_6_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_7_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_7_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_7_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_7_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_7_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_8_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_8_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_8_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_8_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiber_8_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grandfather1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graybeard1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GRIFFIN1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hellgate1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_1_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_2_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_3_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_4_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_4_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_4_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_4_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_4_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_5_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_5_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_5_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_5_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_5_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_6_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_6_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_6_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_6_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_6_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_7_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_7_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_7_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_7_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_7_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_8_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_8_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_8_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_8_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_8_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keen1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leader1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\legendary1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lieutenant1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_1_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_2_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_3_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_4_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_4_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_4_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_4_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_4_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_5_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_5_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_5_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_5_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_5_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_6_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_6_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_6_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_6_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_6_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_7_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_7_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_7_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_7_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_7_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_8_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_8_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_8_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_8_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs_8_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lord1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maiden1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marksman1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mastercryomancer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\masterof1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mist_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mist_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mist_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mist_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mist_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mistress1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nameless1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_2_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_3_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_4_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_4_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_4_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_4_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_4_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_5_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_5_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_5_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_5_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_5_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_6_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_6_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_6_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_6_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_6_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_7_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_7_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_7_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_7_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_7_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_8_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_8_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_8_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_8_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ore_8_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pyromaniac1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rabble1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rare1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ritual1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_1_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_2_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_3_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_4_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_4_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_4_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_4_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_5_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_5_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_5_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_5_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_6_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_6_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_6_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_6_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_7_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_7_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_7_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_7_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_8_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_8_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_8_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_8_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suppression1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\swordmaster1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VEILWEAVER1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warrior1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,108 @@
+﻿<UserControl x:Class="LogicLyric.MVM.View.IgnoreDataGrid"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Height="570" Width="970" 
+        Background="Transparent" >
+
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis" />
+    </UserControl.Resources>
+
+    <Border CornerRadius="30" Background="{StaticResource datagrid0}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+
+            <!--Main Section-->
+            <Grid Grid.Column="1" Margin="30 20 20 20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+
+
+
+                <!--Page Title-->
+                <TextBlock Text="Ignore List" Grid.Row="1" FontSize="32" FontWeight="SemiBold" Margin="0 20 0 0" Foreground="{StaticResource datagrid1}" HorizontalAlignment="Left"/>
+
+                <!--Add Button-->
+                <Button Style="{StaticResource addButton}" Click="Button_Click">
+                    <StackPanel Orientation="Horizontal">
+
+
+                        <TextBlock Text="+" />
+                        <TextBlock Text="Add New Member"/>
+                    </StackPanel>
+                </Button>
+
+                <!--Seprator-->
+                <Separator Height="1" Grid.Row="3" Background="{StaticResource datagrid1}" Margin="0 -1 0 10"/>
+
+
+
+                <TextBlock Text="Filter by" Grid.Row="4" FontSize="13" FontWeight="SemiBold" Margin="0 0 215 0" Foreground="{StaticResource datagrid1}" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+
+                <!--Filter Textbox-->
+                <Grid Width="200" HorizontalAlignment="Right" Grid.Row="4">
+                    <TextBlock Margin="15 0" VerticalAlignment="Center" Foreground="{StaticResource datagrid2}" IsHitTestVisible="False"
+                           Panel.ZIndex="1" Text="Search in Members ..."
+                           Visibility="{Binding ElementName=textBoxFilter, Path=Text.IsEmpty, Converter={StaticResource BoolToVis}}" />
+
+                    <TextBox Name="textBoxFilter" Style="{StaticResource filterTextBox}" TextChanged="searchTextBox_TextChanged"/>
+                </Grid>
+
+                <!--Members Data Grid-->
+                <DataGrid RowStyle="{DynamicResource DataGridRowStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" x:Name="membersDataGrid" Style="{DynamicResource DataGridStyle1}" Grid.Row="5">
+                    <DataGrid.Columns>
+
+                        <DataGridTextColumn Header="#" IsReadOnly="True" CanUserResize="False" Width="auto" Binding="{Binding Number}"/>
+                        <DataGridTemplateColumn Header="Member" IsReadOnly="True" Width="*">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Width="25" Height="25" CornerRadius="50" Margin="0 0 10 0" Background="{Binding BgColor}">
+                                            <TextBlock Text="{Binding Character}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Margin="0 0 0 1"/>
+                                        </Border>
+
+                                        <TextBlock Text="{Binding Name}" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+
+                        <DataGridTextColumn Header="Type" Binding="{Binding Type}" IsReadOnly="True" Width="*"/>
+                        <DataGridTemplateColumn Header="Operations" IsReadOnly="True" Width="auto">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Style="{StaticResource gridEditButton}" Click="Eddit_Item">
+                                            <TextBlock Text="+" />
+                                        </Button>
+                                        <Button Margin="5 0 0 0" Style="{StaticResource gridRemoveButton}" Click="Delete_Item">
+                                            <TextBlock Text="-" />
+                                        </Button>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+
+
+            </Grid>
+
+        </Grid>
+    </Border>
+</UserControl>

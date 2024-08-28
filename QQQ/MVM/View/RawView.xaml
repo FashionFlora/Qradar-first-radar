@@ -1,0 +1,607 @@
+﻿<UserControl x:Class="LogicLyric.MVM.View.RawView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LogicLyric.MVM.View"
+             mc:Ignorable="d" 
+
+             d:DesignHeight="600" d:DesignWidth="800">
+    <Border CornerRadius="20"
+       
+            BorderThickness="1">
+
+        <Grid>
+
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="auto"/>
+
+
+                <RowDefinition Height="*"/>
+
+
+            </Grid.RowDefinitions>
+
+
+
+            <Grid Grid.Row="1">
+
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition/>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+
+                </Grid.ColumnDefinitions>
+
+
+
+                <Border Grid.Column="0"  Background="{StaticResource panelColor}" Margin="30,20,20,20" CornerRadius="40" Opacity="50">
+
+
+                    <StackPanel Orientation="Vertical">
+
+                        <TextBlock  Text="Harvesting "  HorizontalAlignment="Center"
+                               FontSize="20"
+                               FontWeight="Bold"
+                               Foreground="White"
+                               Margin="10">
+                        </TextBlock>
+
+                        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="10,0,0,0">
+
+
+
+                            <TextBlock Text="Tier"  FontSize="20" FontWeight="Bold" Foreground="White"/>
+
+                            <StackPanel Orientation="Horizontal">
+
+                                <StackPanel Orientation="Vertical">
+
+
+
+
+
+
+                                    <DockPanel  Width="70" HorizontalAlignment="Left">
+                                        <TextBlock Text="T1" HorizontalAlignment="Right" Margin="0,0,0,0" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox     x:Name="harvestingT1" IsChecked="{Binding  Path=harvestingT1Bind}" HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                        </DockPanel>
+
+                                    </DockPanel>
+
+                                    <DockPanel  Width="70" HorizontalAlignment="Left">
+                                        <TextBlock Text="T2" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox   x:Name="harvestingT2" IsChecked="{Binding  Path=harvestingT2Bind}" HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                        </DockPanel>
+
+                                    </DockPanel>
+
+                                    <DockPanel  Width="70" HorizontalAlignment="Left">
+                                        <TextBlock Text="T3" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox  x:Name="harvestingT3" IsChecked="{Binding  Path=harvestingT3Bind}"  HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                        </DockPanel>
+
+                                    </DockPanel>
+
+                                    <DockPanel  Width="70" HorizontalAlignment="Left">
+                                        <TextBlock Text="T4" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox x:Name="harvestingT4" IsChecked="{Binding  Path=harvestingT4Bind}"   HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                        </DockPanel>
+
+                                    </DockPanel>
+                                </StackPanel>
+
+
+
+                                <StackPanel Orientation="Vertical" Margin="50,0,0,0">
+
+
+
+
+
+
+                                    <DockPanel  Width="75" HorizontalAlignment="Left">
+                                        <TextBlock Text="T5" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox  x:Name="harvestingT5" IsChecked="{Binding  Path=harvestingT5Bind}"  HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                        </DockPanel>
+
+                                    </DockPanel>
+
+                                    <DockPanel  Width="75" HorizontalAlignment="Left">
+                                        <TextBlock Text="T6" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox x:Name="harvestingT6" IsChecked="{Binding  Path=harvestingT6Bind}"   HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                        </DockPanel>
+
+                                    </DockPanel>
+
+                                    <DockPanel  Width="75" HorizontalAlignment="Left">
+                                        <TextBlock Text="T7" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox  x:Name="harvestingT7" IsChecked="{Binding  Path=harvestingT7Bind}"  HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                        </DockPanel>
+
+                                    </DockPanel>
+
+                                    <DockPanel  Width="75" HorizontalAlignment="Left">
+                                        <TextBlock Text="T8" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox  x:Name="harvestingT8" IsChecked="{Binding  Path=harvestingT8Bind}"  HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                        </DockPanel>
+
+                                    </DockPanel>
+                                </StackPanel>
+                            </StackPanel>
+                            <TextBlock Text="Enchant" FontSize="20" FontWeight="Bold" Foreground="White"  Margin="0,10,0,0"/>
+
+                            <DockPanel  Width="75" HorizontalAlignment="Left">
+                                <TextBlock  Text="E0" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White" />
+                                <DockPanel >
+                                    <CheckBox  x:Name="harvestingE0" IsChecked="{Binding  Path=harvestingE0Bind}"  HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                </DockPanel>
+                            </DockPanel>
+                            <DockPanel  Width="75" HorizontalAlignment="Left">
+                                <TextBlock Text="E1" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White" />
+                                <DockPanel >
+                                    <CheckBox  x:Name="harvestingE1" IsChecked="{Binding  Path=harvestingE1Bind}"  HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                </DockPanel>
+
+                            </DockPanel>
+                            <DockPanel  Width="75" HorizontalAlignment="Left">
+                                <TextBlock Text="E2" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                <DockPanel >
+                                    <CheckBox x:Name="harvestingE2" IsChecked="{Binding  Path=harvestingE2Bind}" HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                </DockPanel>
+
+                            </DockPanel>
+                            <DockPanel  Width="75" HorizontalAlignment="Left">
+                                <TextBlock  Text="E3" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                <DockPanel >
+                                    <CheckBox x:Name="harvestingE3" IsChecked="{Binding  Path=harvestingE3Bind}" HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                </DockPanel>
+
+                            </DockPanel>
+
+
+
+                            <TextBlock Text="Type" FontSize="20" FontWeight="Bold" Foreground="White"  Margin="0,10,0,0" />
+
+                            <DockPanel  Width="105" HorizontalAlignment="Left">
+                                <TextBlock Text="Fiber"  HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                <DockPanel >
+                                    <CheckBox  x:Name="harvestingFiber" IsChecked="{Binding  Path=harvestingFiberBind}" HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                </DockPanel>
+                            </DockPanel>
+
+                            <DockPanel  Width="105" HorizontalAlignment="Left">
+                                <TextBlock  Text="Wood" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                <DockPanel >
+                                    <CheckBox  x:Name="harvestingWood" IsChecked="{Binding  Path=harvestingWoodBind}"  HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                </DockPanel>
+                            </DockPanel>
+
+
+                            <DockPanel  Width="105" HorizontalAlignment="Left">
+                                <TextBlock  Text="Ore"  HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                <DockPanel >
+                                    <CheckBox   x:Name="harvestingOre" IsChecked="{Binding  Path=harvestingOreBind}"   HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                </DockPanel>
+                            </DockPanel>
+
+                            <DockPanel  Width="105" HorizontalAlignment="Left">
+                                <TextBlock  Text="Rock" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                <DockPanel >
+                                    <CheckBox  x:Name="harvestingRock" IsChecked="{Binding  Path=harvestingRockBind}"  HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                </DockPanel>
+                            </DockPanel>
+                            <DockPanel  Width="105" HorizontalAlignment="Left">
+                                <TextBlock  Text="Hide" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                <DockPanel>
+                                    <CheckBox   IsChecked="{Binding  Path=harvestingHideBind}"  HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                </DockPanel>
+                            </DockPanel>
+
+                            <TextBlock Text="Other" FontSize="20" FontWeight="Bold" Foreground="White"  Margin="0,10,0,0"/>
+                            <DockPanel  Width="105" HorizontalAlignment="Left">
+                                <TextBlock  Text="Size" HorizontalAlignment="Right" Margin="0,-2" FontWeight="bold" FontSize="16" Foreground="White"/>
+                                <DockPanel >
+                                    <CheckBox   x:Name="harvestingSize" IsChecked="{Binding  Path=harvestingSizeBind}"   HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                </DockPanel>
+                            </DockPanel>
+
+
+
+
+                        </StackPanel>
+
+
+                        <StackPanel Orientation="Vertical">
+
+                            <TextBlock Text="Icons size" HorizontalAlignment="Center" Margin="0,5,0,-5" FontSize="20"   Foreground="White">
+
+
+                            </TextBlock>
+
+                            <StackPanel VerticalAlignment="Center" Margin="10" >
+                                <Slider  Margin="0
+                                     " Width="200"
+                                    Minimum="15"
+                                    Maximum="170"
+                                    x:Name="translationXItems"
+                                    Value= "{Binding  Path=sizeHarvesting}"
+                                    TickPlacement="BottomRight"
+                                    TickFrequency="1"
+                                    IsSnapToTickEnabled="True"
+                                    SmallChange="1" />
+                             
+                            </StackPanel>
+                        </StackPanel>
+
+
+
+
+
+
+                    </StackPanel>
+                    
+                    
+                    
+
+
+
+
+                </Border>
+
+
+
+                <Border Grid.Column="1" Background="{StaticResource panelColor}" Margin="30,20,20,20" CornerRadius="40" Opacity="50">
+
+
+                    <StackPanel Orientation="Vertical">
+
+                        <TextBlock Text="Mobs" HorizontalAlignment="Center"
+                               FontSize="20"
+                               FontWeight="Bold"
+                               Foreground="White"
+                               Margin="10">
+                        </TextBlock>
+
+                        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="10,0,0,0">
+
+
+
+
+
+
+
+                            <TextBlock Text="Tier" FontSize="20" FontWeight="Bold" Foreground="White"/>
+
+                            <StackPanel Orientation="Horizontal">
+
+                                <StackPanel Orientation="Vertical">
+
+
+
+
+
+
+                                    <DockPanel  Width="75" HorizontalAlignment="Left">
+                                        <TextBlock Text="T1" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox      IsChecked="{Binding  Path=mobT1Bind}" HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                        </DockPanel>
+
+                                    </DockPanel>
+
+                                    <DockPanel  Width="75" HorizontalAlignment="Left">
+                                        <TextBlock Text="T2" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox    IsChecked="{Binding  Path=mobT2Bind}" HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                        </DockPanel>
+
+                                    </DockPanel>
+
+                                    <DockPanel  Width="75" HorizontalAlignment="Left">
+                                        <TextBlock Text="T3" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox  IsChecked="{Binding  Path=mobT3Bind}"  HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                        </DockPanel>
+
+                                    </DockPanel>
+
+                                    <DockPanel  Width="75" HorizontalAlignment="Left">
+                                        <TextBlock Text="T4" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox  IsChecked="{Binding  Path=mobT4Bind}"   HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                        </DockPanel>
+
+                                    </DockPanel>
+                                </StackPanel>
+
+
+
+                                <StackPanel Orientation="Vertical" Margin="50,0,0,0">
+
+
+
+
+
+
+                                    <DockPanel  Width="75" HorizontalAlignment="Left">
+                                        <TextBlock  Text="T5" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox  IsChecked="{Binding  Path=mobT5Bind}"  HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                        </DockPanel>
+
+                                    </DockPanel>
+
+                                    <DockPanel  Width="75" HorizontalAlignment="Left">
+                                        <TextBlock  Text="T6" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox  IsChecked="{Binding  Path=mobT6Bind}"   HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                        </DockPanel>
+
+                                    </DockPanel>
+
+                                    <DockPanel  Width="75" HorizontalAlignment="Left">
+                                        <TextBlock Text="T7"  HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox  IsChecked="{Binding  Path=mobT7Bind}"  HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                        </DockPanel>
+
+                                    </DockPanel>
+
+                                    <DockPanel  Width="75" HorizontalAlignment="Left">
+                                        <TextBlock Text="T8" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox  IsChecked="{Binding  Path=mobT8Bind}"  HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                        </DockPanel>
+
+                                    </DockPanel>
+                                </StackPanel>
+                            </StackPanel>
+
+
+
+
+                            <StackPanel Orientation="Horizontal">
+                                
+                              
+
+                                <StackPanel Orientation="Vertical">
+
+
+
+
+
+                                    <TextBlock Text="Enchant" FontSize="20" FontWeight="Bold" Foreground="White" Margin="0,0,0,0"/>
+
+
+                                    <DockPanel  Width="75" HorizontalAlignment="Left">
+                                        <TextBlock Text="E0" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox    x:Name="mobE0" IsChecked="{Binding  Path=mobE0Bind}"   HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                        </DockPanel>
+
+                                    </DockPanel>
+
+
+
+                                    <DockPanel  Width="75" HorizontalAlignment="Left">
+                                        <TextBlock  Text="E1"  HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox     x:Name="mobE1" IsChecked="{Binding  Path=mobE1Bind}"  HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                        </DockPanel>
+
+                                    </DockPanel>
+                                    <DockPanel  Width="75" HorizontalAlignment="Left">
+                                        <TextBlock  Text="E2"  HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox     x:Name="mobE2" IsChecked="{Binding  Path=mobE2Bind}"  HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                        </DockPanel>
+
+                                    </DockPanel>
+                                    <DockPanel  Width="75" HorizontalAlignment="Left">
+                                        <TextBlock Text="E3" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox   x:Name="mobE3" IsChecked="{Binding  Path=mobE3Bind}"   HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                        </DockPanel>
+
+                                    </DockPanel>
+
+                                    <DockPanel  Width="75" HorizontalAlignment="Left">
+                                        <TextBlock Text="E4" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox   x:Name="mobE4" IsChecked="{Binding  Path=mobE4Bind}"   HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                        </DockPanel>
+                                    </DockPanel>
+
+
+
+
+                                    <TextBlock Text="Type" FontSize="20" FontWeight="Bold" Foreground="White" Margin="0,5,0,0"/>
+
+                                    <DockPanel  Width="120" HorizontalAlignment="Left">
+                                        <TextBlock Text="Harvestable" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox IsChecked="{Binding  Path=harvestableMobBind}"   HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0" />
+                                        </DockPanel>
+                                    </DockPanel>
+
+
+
+                                    <DockPanel  Width="120" HorizontalAlignment="Left">
+                                        <TextBlock Text="Skinnable" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox IsChecked="{Binding  Path=skinnableMobBind}"  HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0" />
+                                        </DockPanel>
+
+                                    </DockPanel>
+
+
+                                    <DockPanel  Width="120" HorizontalAlignment="Left" Margin="0,3,0,0">
+                                        <TextBlock Text="Other" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox  IsChecked="{Binding  Path=allMobBind}"  HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0" />
+                                        </DockPanel>
+                                    </DockPanel>
+
+
+                                    <TextBlock Text="Rest" FontSize="20" FontWeight="Bold" Foreground="White" Margin="0,5,0,0"/>
+
+                                    <DockPanel  Width="120" HorizontalAlignment="Left" Margin="0,3,0,0">
+                                        <TextBlock Text="Show Hp" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox  IsChecked="{Binding  Path=showExpBind}"  HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0" />
+                                        </DockPanel>
+                                        
+                                        
+                                    </DockPanel>
+
+
+                                    <DockPanel  Width="120" HorizontalAlignment="Left" Margin="0,3,0,0">
+                                        <TextBlock Text="Dev mode" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox  IsChecked="{Binding  Path=devModeBind}"  HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0" />
+                                        </DockPanel>
+
+
+                                    </DockPanel>
+
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+
+
+
+
+                <Border Grid.Column="2" Background="{StaticResource panelColor}" Margin="30,20,20,20" CornerRadius="40" Opacity="50">
+
+
+                    <StackPanel Orientation="Vertical">
+
+                        <TextBlock Text="Bosses" HorizontalAlignment="Center"
+                               FontSize="20"
+                               FontWeight="Bold"
+                               Foreground="White"
+                               Margin="10">
+                        </TextBlock>
+
+                        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="10,0,0,0">
+
+
+
+
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel Orientation="Vertical">
+
+
+
+
+
+                                    <TextBlock Text="Mists" FontSize="20" FontWeight="Bold" Foreground="White" Margin="0,0,0,0"/>
+
+
+                                    <DockPanel  Width="165" HorizontalAlignment="Left">
+                                        <TextBlock  Text="Crystal spider" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox    IsChecked="{Binding  Path=spiderBind}"   HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                        </DockPanel>
+
+                                    </DockPanel>
+
+
+
+                                    <DockPanel  Width="165" HorizontalAlignment="Left">
+                                        <TextBlock  Text="Fairy Dragon" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox    IsChecked="{Binding  Path=fairyDragonBind}"  HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                        </DockPanel>
+
+                                    </DockPanel>
+                                    <DockPanel  Width="165" HorizontalAlignment="Left">
+                                        <TextBlock  Text="Veil weaver"  HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox      IsChecked="{Binding  Path=veilWeaverBind}"  HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                        </DockPanel>
+
+                                    </DockPanel>
+                                    <DockPanel  Width="165" HorizontalAlignment="Left">
+                                        <TextBlock Text="Griffin" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox   IsChecked="{Binding  Path=griffinBind}"   HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                        </DockPanel>
+
+                                    </DockPanel>
+
+
+                                    <TextBlock Text="Other" FontSize="20" FontWeight="Bold" Foreground="White" Margin="0,0,0,0"/>
+
+                                    <DockPanel  Width="165" HorizontalAlignment="Left">
+                                        <TextBlock Text="Other Bosses" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox   IsChecked="{Binding  Path=otherBossesBind}"   HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                        </DockPanel>
+
+                                    </DockPanel>
+
+
+                                    <DockPanel  Width="165" HorizontalAlignment="Left">
+                                        <TextBlock Text="Avalone Drones" HorizontalAlignment="Right" Margin="0,-2" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                                        <DockPanel >
+                                            <CheckBox   IsChecked="{Binding  Path=avaloneDronesBind}"   HorizontalAlignment="Right" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,2,0,0"/>
+                                        </DockPanel>
+
+                                    </DockPanel>
+
+
+
+
+
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+
+
+
+
+
+
+
+            </Grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </Grid>
+
+
+
+
+    </Border>
+
+</UserControl>
